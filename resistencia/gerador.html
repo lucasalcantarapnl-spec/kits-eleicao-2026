@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kit Seguimos de Pé · Gerador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{--a:#B3121A;--b:#F2F2F2;--dark:#141414;--light:#F4EFEA}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--dark);color:#fff}
+.wrap{max-width:560px;margin:0 auto;padding:24px 16px 60px}
+h1{font-family:Anton,Impact,sans-serif;font-size:44px;line-height:1;margin:8px 0 6px;text-transform:uppercase}
+p.sub{opacity:.8;margin:0 0 22px}
+.card{background:rgba(255,255,255,.07);border-radius:18px;padding:18px;margin-bottom:22px}
+h2{font-family:Anton,Impact,sans-serif;font-size:26px;margin:0 0 12px;letter-spacing:.5px;text-transform:uppercase;color:var(--b)}
+label{display:block;font-size:13px;font-weight:700;margin:12px 0 6px;opacity:.85;text-transform:uppercase;letter-spacing:.5px}
+input[type=text]{width:100%;padding:14px;font-size:18px;border-radius:12px;border:0;background:#fff;color:#111}
+input[type=file]{width:100%;padding:10px;background:rgba(255,255,255,.1);border-radius:12px;color:#fff}
+.fmt{display:flex;gap:8px;margin:14px 0}
+.fmt button{flex:1;padding:10px;border-radius:999px;border:2px solid rgba(255,255,255,.4);background:none;color:#fff;font-weight:700}
+.fmt button.on{background:#fff;color:var(--dark);border-color:#fff}
+canvas{width:100%;height:auto;border-radius:12px;display:block;margin-top:12px;background:#000}
+.go{width:100%;margin-top:14px;padding:18px;border:0;border-radius:14px;background:var(--b);color:var(--dark);
+    font-family:Anton,Impact,sans-serif;font-size:24px;letter-spacing:.5px;text-transform:uppercase;cursor:pointer}
+.tip{font-size:13px;opacity:.7;margin-top:10px}
+</style>
+<script>window.KIT={"colors":{"a":"#B3121A","b":"#F2F2F2","dark":"#141414","light":"#F4EFEA","ink":"#0B0B0B"},"nome":"Kit Seguimos de Pé","tipo":"carteirinha","emoji":"✊","titulo":["RESISTÊNCIA","DEMOCRÁTICA"],"validade":"Até a próxima vitória.","rodape":"SEGUIMOS DE PÉ · 2026","faixa":"SEGUIMOS DE PÉ"};</script>
+<script src="../gerador.js"></script>
+</head><body><div class="wrap">
+<h1>Sua Carteirinha da Resistência</h1>
+<p class="sub">Digite seu nome, gere sua imagem e poste com orgulho.</p>
+<div class="card">
+<h2>1 · Carteirinha de Membro</h2>
+<label for="nome">Seu nome</label><input id="nome" type="text" maxlength="40" placeholder="Ex.: Maria da Silva" autocomplete="name">
+<label for="cidade">Sua cidade (opcional)</label><input id="cidade" type="text" maxlength="32" placeholder="Ex.: Recife - PE">
+<label for="foto">Sua foto (opcional · usada na carteirinha e na moldura)</label><input id="foto" type="file" accept="image/*">
+<div class="fmt"><button data-fmt="story" class="on">Story (9:16)</button><button data-fmt="feed">Feed (4:5)</button></div>
+<canvas id="cv"></canvas>
+<button class="go" id="baixar">Baixar / compartilhar</button>
+<p class="tip">No celular, toque em "Baixar / compartilhar" e escolha Instagram, WhatsApp ou Salvar imagem.</p>
+</div>
+<div class="card">
+<h2>2 · Moldura para foto de perfil</h2>
+<p class="tip" style="margin-top:0">Usa a foto que você escolheu acima.</p>
+<canvas id="mv"></canvas>
+<button class="go" id="baixarMoldura">Baixar foto de perfil</button>
+</div>
+</div></body></html>
